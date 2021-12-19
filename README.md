@@ -25,13 +25,15 @@
         -**org.hibernate.dialect** is the package where the dialect is available in Java class. It helps in mapping the application in Java with the Database.
   
   **Annotation** 
+  
       1. @Entity annotation specifies that the class is an entity.
+     
       2. @Table annotation specifies the table in the Databe with which this entity is mapped.
      
       3. @GeneratedValue annotation specifies the generation strategies for the values of primary keys.
       
       4. @RestController is a convenient annotation that combines **@Controllor** and **@ResponseBody**, which eliminates the need to annotate every request handling method of 
-the controller class with the **@ResponseBody annotation**.
+    the controller class with the **@ResponseBody annotation**.
       
       5. @RequestBody annotation allows us to retrieve the request's body and automatically convert it to Java Object.
         
