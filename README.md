@@ -1,8 +1,6 @@
 # Spring Boot CRUD Application 
 
 ![Spring Boot Project Arhitecture](https://user-images.githubusercontent.com/49694359/146692210-bbed65a8-44c4-4769-927c-2ec707b41542.JPG)
-***
-
 
 ## Steps:
         1. Create Spring Boot Project        
@@ -21,8 +19,6 @@
         5. Create Spring Data Repository
         7. Create Custome Exception
         9. Create REST API Operations
-***
-   
    
  ## New Knowledge
   ***
@@ -44,4 +40,3 @@
   **Spring Boot framework** provides us repository which is responsible to perform various operations on the object.
  
   **Controller Layer** depends on **Service Layer**
-***
