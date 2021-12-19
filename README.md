@@ -21,7 +21,6 @@
         9. Create REST API Operations
    
  ## New Knowledge
-  ***
   **Hibernet Dialect** is a language which is used by the database for communication.
         -**org.hibernate.dialect** is the package where the dialect is available in Java class. It helps in mapping the application in Java with the Database.
   
