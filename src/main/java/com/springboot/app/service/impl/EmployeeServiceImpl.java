@@ -18,16 +18,19 @@ public class EmployeeServiceImpl implements EmployeeService {
         this.employeeRepository = employeeRepository;
     }
 
+    // Build Delete Employee REST API
     @Override
     public Employee saveEmployee(Employee employee) {
         return employeeRepository.save(employee);
     }
 
+    // Build Get All Employees REST API
     @Override
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
     }
 
+    // Build Get Employee By Id REST API
     @Override
     public Employee getEmployeeById(long id) {
 //        Optional<Employee> employee = employeeRepository.findById(id);
@@ -40,6 +43,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 -> new ResourceNotFoundException("Employee", "Id", id));
     }
 
+    // Build Update Employee REST API
     @Override
     public Employee updateEmployee(Employee employee, long id) {
         // we need to check whether employee with given id is exist in Db or not
@@ -54,5 +58,16 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeRepository.save(existingEmployee);
         return existingEmployee;
 
+    }
+
+    // build Delete Employee REST API
+    @Override
+    public void deleteEmployee(long id) {
+        // check whether a employee exist in a DB or not
+        Employee deleteEmployee = employeeRepository.findById(id).orElseThrow(
+                () -> new ResourceNotFoundException("Employee", "Id", id));
+        // delete employee from DB
+        employeeRepository.delete(deleteEmployee);
+//        employeeRepository.deleteById(id);
     }
 }

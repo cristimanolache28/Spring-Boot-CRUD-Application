@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.nio.file.Path;
 import java.util.List;
 
 @RestController
@@ -38,8 +39,16 @@ public class EmployeeController {
 
     // build update employee REST API
     @PutMapping("/{id}")
-    public ResponseEntity<Employee> updateEmployee(@PathVariable("id") long employeeId, @RequestBody Employee employee) {
-        return new ResponseEntity<>(employeeService.updateEmployee(employee, employeeId), HttpStatus.OK);
+    public ResponseEntity<Employee> updateEmployee(@PathVariable("id") long id, @RequestBody Employee employee) {
+        return new ResponseEntity<>(employeeService.updateEmployee(employee, id), HttpStatus.OK);
+    }
+
+    // build delete employee REST API
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteEmployee(@PathVariable("id") long id) {
+        // delete employee from DB
+        employeeService.deleteEmployee(id);
+        return new ResponseEntity<String>("Employee deleted successfully!", HttpStatus.OK);
     }
 
 }
