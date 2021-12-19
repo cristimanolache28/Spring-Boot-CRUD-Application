@@ -6,7 +6,7 @@
 
         1. Create Spring Boot Project        
         2. Create Packaging Structure
-           * controller
+           - controller
            * service
            * repository
            * model
