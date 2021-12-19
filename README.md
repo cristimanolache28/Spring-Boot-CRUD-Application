@@ -1,10 +1,10 @@
 # Spring Boot CRUD Application 
-***
+
 ![Spring Boot Project Arhitecture](https://user-images.githubusercontent.com/49694359/146692210-bbed65a8-44c4-4769-927c-2ec707b41542.JPG)
 ***
 
 
-## Steps: *** 
+## Steps:
         1. Create Spring Boot Project        
         2. Create Packaging Structure
            * controller
@@ -21,8 +21,9 @@
         5. Create Spring Data Repository
         7. Create Custome Exception
         9. Create REST API Operations
-        
-        
+***
+   
+   
  ## New Knowledge
   ***
   **Hibernet Dialect** is a language which is used by the database for communication.
@@ -43,4 +44,4 @@
   **Spring Boot framework** provides us repository which is responsible to perform various operations on the object.
  
   **Controller Layer** depends on **Service Layer**
-  
+***
