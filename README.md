@@ -10,11 +10,11 @@
        * repository
        * model
        * exception
-   3. Configure MySQL Database
-       a. Repository / DAO connect to database
-           * JDBC URL
-           * Username
-           * Password
+   3. Configure MySQL Database:
+        a. Repository / DAO connect to database
+            * JDBC URL
+            * Username
+            * Password
    4. Create JPA Entity
    5. Create Spring Data Repository
    7. Create Custome Exception
